@@ -163,3 +163,24 @@ print("\nFinal test MAE:", test_mae)
 
 pd.DataFrame(results).to_csv("federated_lstm_time_series.csv", index=False)
 print("Saved uplink stats.")
+
+# ───────── Reproduced Results ───────── #
+# Dataset : tulipa762/electricity_load_diagrams
+# Clients : 3  |  Rounds : 100  |  Local epochs : 10  |  Batch : 64
+# Sequence length : 24  |  Input : univariate (raw load values)
+# Compressor : DeltaCompressor(kf=1e-3)
+#
+# Round   1 | upload 0.29 KB | val MAE  735.75
+# Round  10 | upload 0.30 KB | val MAE  635.23
+# Round  20 | upload 0.31 KB | val MAE  633.56
+# Round  30 | upload 0.30 KB | val MAE  630.67
+# Round  40 | upload 0.31 KB | val MAE  629.81
+# Round  50 | upload 0.31 KB | val MAE  624.78
+# Round  60 | upload 0.31 KB | val MAE  630.31
+# Round  70 | upload 0.31 KB | val MAE  629.27
+# Round  80 | upload 0.31 KB | val MAE  628.34
+# Round  90 | upload 0.31 KB | val MAE  626.33
+# Round 100 | upload 0.31 KB | val MAE  636.64
+#
+# Final test MAE : 1159.05
+# ─────────────────────────────────────── #
