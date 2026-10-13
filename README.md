@@ -1,5 +1,8 @@
 # Compressed FL Univariate LSTM Forecasting
 
+> **Historical exploratory prototype.** The current example script takes the first value of each dataset-level `target` series and creates sliding windows across rows rather than consecutive hourly observations. Its reported MAE values therefore should not be treated as validated hourly electricity-load forecasting results. Proper temporal reconstruction and chronological evaluation are needed before drawing performance conclusions. The code is retained for inspection.
+
+
 Open-source implementation of **compressed federated learning** for **univariate** time-series forecasting using an LSTM on the [Electricity Load Diagrams](https://huggingface.co/datasets/tulipa762/electricity_load_diagrams) dataset.
 
 ## How this differs from [Compressed-Federated-Time-Series-Forecasting](https://github.com/emadhammami/Compressed-Federated-Time-Series-Forecasting)
